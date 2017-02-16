@@ -18,7 +18,7 @@ const Photo = (props) => (
     <figcaption>
       <p>{props.post.caption}</p>
       <div className="control-buttons">
-        <button className="likes">&hearts; {props.post.likes}</button>
+        <button onClick={props.increment.bind(null, props.i)} className="likes">&hearts; {props.post.likes}</button>
         <Link className="button" to={`/view/${props.post.code}`}>
           <span className="comment-count">
             <span className="speech-bubble"></span>
